@@ -3,7 +3,7 @@
 The kiyokosmacros website files. See it on [kiyokosmacros.netlify.app](https://kiyokosmacros.netlify.app)
 
 <p align="center">
-  <img src="https://github.com/fr0st-iwnl/kiyokosmacros-website/blob/main/assets/images/thumbnail.png" alt="FrostOS look">
+  <img src="" alt="FrostOS look">
 </p>
 
 
