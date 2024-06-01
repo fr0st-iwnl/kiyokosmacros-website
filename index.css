@@ -1,17 +1,18 @@
 * {
+    cursor: auto; /* Reset cursor style to default */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 *::selection {
-    background-color: rgba(128, 128, 128, 0);
+    background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent gray */
 }
 
 *::-moz-selection {
-    background: rgba(128, 128, 128, 0);
+    background: rgba(128, 128, 128, 0.5); /* Semi-transparent gray for Firefox */
 }
- 
+
 
 * {
     -webkit-tap-highlight-color: transparent;
@@ -26,8 +27,33 @@ html {
     
 }
 
+.downloadfont, .howtousefont, .joinfont {
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.join:hover,
+.join svg {
+    cursor: pointer;
+}
+
+.downloadsvg:hover,
+.downloadsvg svg {
+    cursor: pointer;
+}
+
+.howtous:hover,
+.howtous svg,
+.how-to-use-button:hover svg {
+    cursor: pointer;
+}
+
+
+
+
+
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 3px;
 }
 ::-webkit-scrollbar-track {
     background: #0a0a1002;
@@ -102,6 +128,22 @@ header{
     align-items: center;
     justify-content: center;
 }
+.logo img {
+    pointer-events: none; /* Disable mouse events on the image */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-drag: none; /* Disable dragging in WebKit browsers */
+}
+
+.logo a {
+    pointer-events: auto; /* Enable mouse events on the link */
+    cursor: pointer; /* Set cursor to pointer */
+}
+
+.githubrelease{
+    cursor: pointer;
+}
+
+
 .lightcolors #logo-text img{
     filter: brightness(0);
 }
@@ -114,6 +156,7 @@ header{
     gap: 20px;
 }
 .star-on-github-button{
+    cursor: pointer;
     width: fit-content;
     height: 40px;
     border-radius: 10px;
@@ -128,12 +171,15 @@ header{
     transition: all .3s;
 }
 .star-on-github-button svg{
+    cursor: pointer;
     width: 1.6rem;
 }
 .star-on-github-button svg path{
+    cursor: pointer;
     fill: var(--light-text-secondary);
 }
 .star-on-github-button:hover{
+    cursor: pointer;
     color: var(--primary-theme-color)
 }
 
@@ -148,19 +194,26 @@ header{
     border-radius: 5px;
     cursor: pointer;
 }
+
+
 /* checkbox */
 #visual-toggle{
+    cursor: pointer;
     appearance: none;
     display: none;
 }
+
 .svgIcon-toggle{
+    cursor: pointer;
     width: 25px;
 }
+
 .moon-svg{
     width: 13px;
     position: absolute;
     transition: all .3s;
 }
+
 .sun-svg{
     opacity: 0;
     transition: all .3s;
@@ -176,6 +229,21 @@ header{
     transform: rotate(360deg);
     transition: all .3s;
 }
+
+
+
+#visual-toggle-button svg{
+    cursor: pointer;
+}
+#visual-toggle-button svg path{
+    cursor: pointer;
+}
+#visual-toggle-button:hover{
+    cursor: pointer;
+}
+
+/* Rest of your existing CSS */
+
 
 main{
     width: 100%;
@@ -288,6 +356,7 @@ main{
   
   
   .Download-button svg {
+    cursor: pointer;
     margin-right: 8px;
     width: 25px;
   }
@@ -315,6 +384,7 @@ main{
   }
 
   .Download-button2 svg {
+    cursor: pointer;
     margin-right: 8px;
     width: 25px;
   }
@@ -347,6 +417,7 @@ main{
 
 
   .how-to-use-button svg {
+    cursor: pointer;
     margin-right: 8px;
     width: 18px;
   }
@@ -473,6 +544,7 @@ main{
 }
 
 .how-to-use-button {
+    cursor: pointer;
     font-size: 2rem;
     width: 200px;
     height: fit-content;
@@ -488,9 +560,13 @@ main{
     background: linear-gradient(to right, gray, rgb(73, 72, 72));
     background-color: var(--body-color);
     transition: all .3s;
-    margin: 0 auto; /* Set margin to 'auto' to center horizontally */
+    margin: 0 auto;
     color: var(--cards-text-color);
 }
+
+
+
+
 
 @keyframes buttonHover2 {
     0% {
@@ -511,10 +587,12 @@ main{
 }
 
 .how-to-use-button:hover {
+    cursor: pointer;
     animation: buttonHover2 0.4s ease forwards; 
 }
 
 .how-to-use-button:not(:hover) {
+    cursor: pointer;
     animation: buttonLeave2 0.4s ease forwards; 
 }
 
@@ -555,6 +633,11 @@ main{
     overflow: hidden; /* Hide overflowing blur effect */
 }
 
+@media only screen and (max-width: 600px) {
+    .cardyt {
+        width: 80vw; /* Set width as a percentage of the viewport width */
+    }
+  }
 
 
 .cardyt::before {
@@ -589,7 +672,12 @@ main{
     font-weight: bold;
 }
 
+.frost{
+    cursor: pointer;
+}
+
 .watch-video {
+    cursor: pointer;
     position: absolute;
     bottom: 20px; 
     left: 50%;
@@ -605,6 +693,14 @@ main{
     /* Add shadow */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the values for your desired shadow */
 }
+
+
+@media only screen and (max-width: 600px) {
+    .watch-video {
+        font-size: 1.8em; /* Set width as a percentage of the viewport width */
+    }
+  }
+
 
 
 .watch-video:hover {
@@ -658,8 +754,7 @@ main{
     margin-right: 8px;
     width: 25px;
   }
-
-.footerContainer{
+  .footerContainer{
     box-shadow: 0px 10px 40px #3743ee; /* Adjust the values as needed */
     height: 20vh;
     width: 100%;
@@ -686,6 +781,71 @@ main{
     font-size: 1.3rem;
     color: var(--light-text);
   }
+
+
+/* UNCOMMENT THIS FOR THE SPECIAL GITHUB ICON THAT LINKS TO THE SOURCE CODE OF THE WEBSITE /*
+
+  /*
+.footerContainer {
+    box-shadow: 0px 10px 40px #3743ee;  // Adjust the values as needed 
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  // Stack elements vertically 
+    align-items: center;
+    justify-content: space-between;  // Distribute space between elements 
+    border-top: 1px solid var(--border-color);
+    margin-top: 100px;
+    transition: all .3s;
+    padding: 80px 0;  // Add some padding for better spacing 
+}
+
+.footerContainer p {
+    color: var(--light-text);
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    transition: all .3s;
+    margin: 5px 0;  // Add margin to separate the paragraphs 
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color: var(--secondary-theme-color);
+    transition: all .3s;
+}
+
+.fa-copyright {
+    font-size: 1.3rem;
+    color: var(--light-text);
+}
+
+.footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+*/
+
+
+
+
+/*
+.sourceCodeText a {
+    font-size: 2.5rem;  // Increase the icon size 
+    color: var(--secondary-theme-color);
+    cursor: pointer;  // Add cursor pointer 
+}
+
+.sourceCodeText a:hover {
+    color: var(--primary-theme-color);  // Optional: Change color on hover 
+}
+
+.fa-github {
+    cursor: pointer;
+}
+*/
+ 
 /* footer */
 
 
@@ -789,6 +949,7 @@ main{
         padding: 10px 20px;
     }
     .how-to-use-button{
+        cursor: pointer;
         font-size: 1.8rem;
         padding: 10px 20px;
     }

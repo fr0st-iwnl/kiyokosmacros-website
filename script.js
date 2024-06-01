@@ -44,4 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.querySelector('.logo a').addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // prevent user to right click on the image
+});
+
+
+
+ // Get the current year
+ const currentYear = new Date().getFullYear();
+    
+ // Update the footer with the current year
+ document.getElementById('currentYear').textContent = currentYear;
      
