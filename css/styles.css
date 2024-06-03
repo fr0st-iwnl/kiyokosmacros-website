@@ -1,0 +1,845 @@
+* {
+    cursor: auto; /* Reset cursor style to default */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*::selection {
+    background-color: rgba(128, 128, 128, 0.5); /* Semi-transparent gray */
+}
+
+*::-moz-selection {
+    background: rgba(128, 128, 128, 0.5); /* Semi-transparent gray for Firefox */
+}
+
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    
+}
+
+
+
+
+
+
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0a1002;
+}
+::-webkit-scrollbar-thumb{
+   background-color: var(--primary-theme-color);
+   border-radius: 50px;
+
+}
+:root{
+    
+    cursor:default;
+    --border-color: #27272a;
+    --nav-color-one: #0d0d179a;
+    --nav-color-two: #0d0618;
+    --body-color: #0a0611;
+    --dark-text: #101010;
+    --light-text: #ffffff;
+    --light-text-secondary: #b9b9b9;
+    --light-text-desc: #d8d8d8;
+    --primary-theme-color: #7937e8;
+    --secondary-theme-color: #ae8bfd;
+}
+
+body{
+    background-color: var(--body-color);
+    transition: all .3s;
+    position: relative;
+    color: var(--light-text);
+    overflow: hidden;
+}
+.scroll-enable{
+    overflow: unset;
+}
+.lightcolors{
+    --body-color: #f6f6f2;
+    --dark-text: #fff;
+    --light-text: #101010;
+    --nav-color-two: #f6f6f2;
+    --nav-color-one: #f1f1f17e;
+    --border-color: #ddd;
+    --light-text-secondary: #464853;
+    --light-text-desc: #020202;
+    --cards-text-color: #fff; /* White text color for cards container */
+}
+
+a{
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 65px;
+    background:linear-gradient(to bottom, var(--nav-color-one) , var(--nav-color-two) );
+    padding: 0px 30px;
+    border-bottom: 1px solid var(--border-color);
+    transition: all .3s;
+    backdrop-filter: blur(5px);
+}
+.logo{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img {
+    pointer-events: none; /* Disable mouse events on the image */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-drag: none; /* Disable dragging in WebKit browsers */
+}
+
+.logo a {
+    pointer-events: auto; /* Enable mouse events on the link */
+    cursor: pointer; /* Set cursor to pointer */
+}
+
+.githubrelease{
+    cursor: pointer;
+}
+
+
+.lightcolors #logo-text img{
+    filter: brightness(0);
+}
+.right-nav-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    gap: 20px;
+}
+
+.faq-button, .star-on-github-button {
+    cursor: pointer;
+    width: fit-content;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 0px 20px;
+    gap: 10px;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.faq-button svg, .star-on-github-button svg {
+    cursor: pointer;
+    width: 1rem;
+    vertical-align: middle; /* Adjust the vertical alignment */
+    margin-bottom: 3px; /* Adjust the margin bottom */
+}
+
+
+.faq-button svg path, .star-on-github-button svg path {
+    cursor: pointer;
+    fill: var(--light-text-secondary);
+}
+
+.faq-button:hover, .star-on-github-button:hover {
+    cursor: pointer;
+    color: var(--primary-theme-color);
+}
+@media (max-width: 600px) {
+    .faq-button {
+        display: none; /* Hide the FAQ button on smaller screens */
+    }
+}
+
+
+.star-on-github-button{
+    cursor: pointer;
+    width: fit-content;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 0px 20px;
+    gap: 10px;
+    font-weight: 500;
+    transition: all .3s;
+}
+.star-on-github-button svg{
+    cursor: pointer;
+    width: 1.6rem;
+}
+.star-on-github-button svg path{
+    cursor: pointer;
+    fill: var(--light-text-secondary);
+}
+.star-on-github-button:hover{
+    cursor: pointer;
+    color: var(--primary-theme-color)
+}
+
+#visual-toggle-button{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.video1 {
+    cursor: pointer;
+    color: #944ccf;
+    transition: 0.2s;
+}
+
+.video1:hover {
+    color: #b57ff3; /* Relative color for hover state */
+}
+
+.video2 {
+    cursor: pointer;
+    color: #944ccf;
+    transition: 0.2s;
+}
+
+.video2:hover {
+    color: #b57ff3; /* Relative color for hover state */
+}
+
+.video3 {
+    cursor: pointer;
+    color: #944ccf;
+    transition: 0.2s;
+}
+
+.video3:hover {
+    color: #b57ff3; /* Relative color for hover state */
+}
+
+
+
+/* checkbox */
+#visual-toggle{
+    cursor: pointer;
+    appearance: none;
+    display: none;
+}
+
+.svgIcon-toggle{
+    cursor: pointer;
+    width: 25px;
+}
+
+.moon-svg{
+    width: 13px;
+    position: absolute;
+    transition: all .3s;
+}
+
+.sun-svg{
+    opacity: 0;
+    transition: all .3s;
+}
+.lightmode .sun-svg{
+    transform: rotate(180deg);
+    opacity: 1;
+}
+.lightmode .moon-svg{
+    opacity: 0;
+}
+.animate .moon-svg{
+    transform: rotate(360deg);
+    transition: all .3s;
+}
+
+
+
+#visual-toggle-button svg{
+    cursor: pointer;
+}
+#visual-toggle-button svg path{
+    cursor: pointer;
+}
+#visual-toggle-button:hover{
+    cursor: pointer;
+}
+
+/* Rest of your existing CSS */
+
+
+main{
+    width: 100%;
+    margin-top: 65px;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+/* Adjust the styles for landingContainer and left-container */
+.landingContainer {
+    width: 100%;
+    height: auto; /* Adjust height to fit content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px; /* Add padding */
+}
+
+.left-container {
+    width: 100%;
+    max-width: 800px; /* Match the max-width of FAQ content */
+    padding: 0 20px; /* Add padding */
+}
+
+/* Remove unnecessary styles for landingContainer and left-container */
+@media screen and (max-width:768px) {
+    .left-container {
+        padding: 40px;
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .landingContainer {
+        height: auto; /* Adjust height to fit content */
+    }
+  
+    .left-container {
+        padding: 40px;
+        padding-top: 100px;
+        gap: 20px;
+    }
+}
+.main-desc{
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    font-size: 2rem;
+    color: var(--light-text-secondary);
+    letter-spacing: 0.5px;
+    font-weight: 400;
+
+}
+
+
+.landing-button-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+
+
+/* footer */
+  .footerContainer {
+    box-shadow: 0px 10px 40px #3743ee;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+    transition: all .3s;
+    padding: 80px 0;
+}
+
+.footerContainer p {
+    color: var(--light-text);
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    transition: all .3s;
+    margin-bottom: 10px;
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color: var(--secondary-theme-color);
+    transition: all .3s;
+}
+
+.fa-copyright {
+    font-size: 1.3rem;
+    color: var(--light-text);
+}
+
+.footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.faqButtonContainer {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 600px) {
+    .faqButtonContainer {
+        cursor: pointer;
+        display: block; /* Show on smaller screens */
+        margin: 1px 0;
+    }
+    
+    .faqButton:hover {
+        color: #3a59d9; /* Relative color for hover state */
+    }
+    .faqButton{
+        cursor: pointer;
+        font-size: 1.5em;
+        transition: 0.2s;
+    }
+    .lightcolors .faqButton{
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+    .footerTop p{
+        margin-top: -50px;
+    }
+    
+}
+
+.frost{
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.frost:hover {
+    color: #3a59d9; /* Relative color for hover state */
+}
+
+/* UNCOMMENT THIS FOR THE SPECIAL GITHUB ICON THAT LINKS TO THE SOURCE CODE OF THE WEBSITE /*
+
+  /*
+.footerContainer {
+    box-shadow: 0px 10px 40px #3743ee;  // Adjust the values as needed 
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  // Stack elements vertically 
+    align-items: center;
+    justify-content: space-between;  // Distribute space between elements 
+    border-top: 1px solid var(--border-color);
+    margin-top: 100px;
+    transition: all .3s;
+    padding: 80px 0;  // Add some padding for better spacing 
+}
+
+.footerContainer p {
+    color: var(--light-text);
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    transition: all .3s;
+    margin: 5px 0;  // Add margin to separate the paragraphs 
+}
+
+.footerContainer a {
+    text-decoration: none;
+    color: var(--secondary-theme-color);
+    transition: all .3s;
+}
+
+.fa-copyright {
+    font-size: 1.3rem;
+    color: var(--light-text);
+}
+
+.footerTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+*/
+/*
+.sourceCodeText a {
+    font-size: 2.5rem;  
+    color: var(--secondary-theme-color);
+    cursor: pointer; 
+}
+
+.sourceCodeText a:hover {
+    color: var(--primary-theme-color);  
+}
+
+.fa-github {
+    cursor: pointer;
+}
+/*
+
+
+/*
+.sourceCodeText a {
+    font-size: 2.5rem;  // Increase the icon size 
+    color: var(--secondary-theme-color);
+    cursor: pointer;  // Add cursor pointer 
+}
+
+.sourceCodeText a:hover {
+    color: var(--primary-theme-color);  // Optional: Change color on hover 
+}
+
+.fa-github {
+    cursor: pointer;
+}
+*/
+ 
+/* footer */
+
+
+
+/* responsive code below*/
+@media screen and (max-width:1920px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media screen and (max-width:998px) {
+    html {
+        font-size: 55%;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .landingContainer{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .left-container{
+        width: 100%;
+    }
+    .right-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-container img{
+        width: 60%;
+    }
+    .all-icons-wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+    .left-container{
+        padding: 40px;
+        padding-top: 100px;
+    }
+    .content-container{
+        padding: 40px;
+    }
+ 
+}
+
+
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 45%;  
+    }
+    .landingContainer{
+        height: 50vh;
+    }
+    .left-container{
+        padding: 40px;
+        padding-top: 100px;
+        gap: 20px;
+    }
+    .landing-button-container{
+        margin-top: 0;
+    }
+    .right-container{
+        padding: 40px;
+        padding-top: 0;
+        justify-content: flex-start;
+    }
+    .right-container img{
+        width: 100%;
+    }
+    .main-desc{
+        font-size: 1.8rem;
+    }
+    .content-container{
+       margin-top: 50px;
+       padding-bottom: 0;
+    }
+    .Download-button{
+        font-size: 1.8rem;
+        padding: 10px 20px;
+    }
+    .how-to-use-button{
+        cursor: pointer;
+        font-size: 1.8rem;
+        padding: 10px 20px;
+    }
+
+    .how-to-use ul{
+        gap: 10px;
+        margin-top: 0;
+    }
+    .how-to-use ul li{
+        margin-left: 10px;
+        padding-left: 10px;
+        line-height: 1.6em;
+    }
+    .footerContainer{
+        height: 10vh;
+    }
+    .footerContainer p{
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 43%;
+    }
+    .all-icons-wrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .landing-button-container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+ 
+}
+
+@media screen and (max-width:375px) {
+    html {
+        font-size: 40%;
+    }
+    .all-icons-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width:300px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+
+/* height media  */
+@media screen and (min-height:700px) {
+    .left-container {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 600px) and (min-height: 700px) {
+
+    .left-container {
+        justify-content: center;
+    }
+  
+    .right-container {
+        align-items: flex-start;
+        padding-bottom: 0;
+    }
+
+    .content-container{
+        margin-top: 0;
+    }
+}
+
+
+/* Announcement Container */
+.announcement {
+    background:linear-gradient(to bottom, var(--nav-color-one) , var(--nav-color-two) );
+    color: white;
+    padding: 10px; /* Increased padding */
+    border-radius: 1px; /* Increased border radius */
+    text-align: center; /* Center text */
+    position: relative; /* Relative position */
+    z-index: 1000; /* Ensure it appears on top */
+    border-bottom: 1px solid #394357; /* Colored border at the bottom */
+}
+
+.lightcolors .announcement p  {
+    color: black;
+}
+.lightcolors .announcement a  {
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+.announcement a{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.announcement p {
+    margin: 0;
+    font-size: 13px; /* Increased font size */
+}
+
+
+
+
+
+
+/* responsive code above */
+
+
+
+
+/* FAQ Section */
+.faq-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.faq-heading {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #D1C4E9; /* Light lavender color for good contrast */
+    font-weight: 600; /* Increased weight for better emphasis */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    letter-spacing: 1px; /* Added letter spacing for readability */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px 20px; /* Added padding for breathing space */
+    background: linear-gradient(to right, #301934, #493057); /* Darker gradient for harmony with the main background */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    display: inline-block; 
+    box-shadow: 0 4px 8px rgba(80, 80, 180, 0.7); 
+}
+
+
+.lightcolors .faq-answer{
+    color: rgb(97, 93, 93);
+}
+
+.faq-answer3{
+    font-size: 18px;
+    line-height: 1.6;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #eaeef5;
+}
+
+.lightcolors .faq-answer3{
+    color: black;
+}
+
+.nvidia{
+    color: greenyellow;
+}
+
+.lightcolors .nvidia{
+    color: rgb(4, 128, 0);
+}
+
+.lightcolors .ulll{
+    color: rgb(97, 93, 93);
+}
+
+.lightcolors .faq-question{
+    color: black;
+}
+
+.lightcolors .ull{
+    color: black;
+}
+
+.faq-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.lightcolors .faq-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+}
+
+.faq-question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #eaeef5;
+}
+
+.faq-answer2 {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #9e71eb;
+}
+
+.ull {
+    font-size: 14px; 
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #bcbfc4;
+}
+
+.ulll {
+    font-size: 16px; 
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #bcbfc4;
+}
+
+
+
+
+
+
+  
+  
