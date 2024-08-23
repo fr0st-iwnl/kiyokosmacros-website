@@ -9,7 +9,7 @@ The kiyokosmacros website files. See it on [kiyokosmacros.netlify.app](https://k
 
 ## Contributions
 
-Feel free
+Feel free.
 
 ## Credits
 
