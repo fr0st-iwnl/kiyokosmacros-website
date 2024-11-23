@@ -72,6 +72,7 @@ body{
     --body-color: #f6f6f2;
     --dark-text: #fff;
     --light-text: #101010;
+    --bold-text: #524e4e;
     --nav-color-two: #f6f6f2;
     --nav-color-one: #f1f1f17e;
     --border-color: #ddd;
@@ -750,9 +751,11 @@ main{
     padding: 10px 20px; /* Added padding for breathing space */
     background: linear-gradient(to right, #301934, #493057); /* Darker gradient for harmony with the main background */
     border-radius: 8px; /* Rounded corners for a softer look */
-    display: inline-block; 
     box-shadow: 0 4px 8px rgba(80, 80, 180, 0.7); 
 }
+
+
+
 
 
 .lightcolors .faq-answer{
@@ -805,7 +808,10 @@ main{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    padding-left: 15px; /* Adds some space between text and border */
+    border-left: 5px solid #794BC4; /* Add your desired color here */
 }
+
 
 .faq-answer {
     font-size: 18px;
@@ -833,7 +839,21 @@ main{
     color: #bcbfc4;
 }
 
+.lightcolors b {
+    color: black; /* Set the color to black */
+}
 
+b{
+    color: #f0f0f0;
+}
+
+span{
+    color: antiquewhite;
+}
+
+.lightcolors span {
+    color: black;
+}
 
 
 

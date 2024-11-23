@@ -42,7 +42,7 @@
     
         <nav class="navbar">
           <div class="logo">
-            <a href="https://kiyokosmacros.netlify.app" id="logo-text">
+            <a href="index.html" id="logo-text">
                 <img src="./assets/images/kmmm.png" width="120" draggable="false" oncontextmenu="return false;">
             </a>
         </div>
@@ -85,24 +85,24 @@
         <div class="faq-content">
             <h1 class="faq-heading faq-item" data-aos="fade-up"
                 data-aos-offset="200"
-                data-aos-delay="400"
+                data-aos-delay="100"
                 data-aos-duration="650"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
                 data-aos-once="true">? - Frequently Asked Questions</h1>
                 
-                <h3 style="font-size: 15px;" data-aos="fade-up"
+                <h3 class="last-updated" style="font-size: 15px;" data-aos="fade-up"
                 data-aos-offset="200"
-                data-aos-delay="400"
+                data-aos-delay="100"
                 data-aos-duration="650"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
-                data-aos-once="true">Last Updated - <b title="17 October 2024">17/10/2024</b></h3> <br> <br>
+                data-aos-once="true">Last Updated - <b title="21 November 2024">21/11/2024</b></h3> <br> <br>
                
             
             <div id="question-1" class="faq-item" data-aos="fade-up"
                 data-aos-offset="200"
-                data-aos-delay="500"
+                data-aos-delay="100"
                 data-aos-duration="600"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
@@ -117,7 +117,7 @@
     
             <div id="question-2" class="faq-item" data-aos="fade-up"
                 data-aos-offset="200"
-                data-aos-delay="500"
+                data-aos-delay="100"
                 data-aos-duration="600"
                 data-aos-easing="ease-in-out"
                 data-aos-mirror="true"
@@ -125,33 +125,21 @@
                 <h2 class="faq-question">2. Why is my macro not working?</h2>
                 <p class="faq-answer"><b>Possible issues:</b>
                     <ul class="ull">
-                        <li>If an error appears saying "The data file "Icons" folder is missing Extract file," check this <a class="video1" href="https://www.youtube.com/watch?v=0uUlHG9pidc&t=11s" target="_blank">Video</a> to see how to extract the macro.</li>
+                        <li>If an error appears saying <b>"The data file "Icons" folder is missing Extract file,"</b> check this <a class="video1" href="https://www.youtube.com/watch?v=0uUlHG9pidc&t=11s" target="_blank">Video</a> to see how to extract the macro.</li>
                         <li>Download the v1.1 (deprecated) version of AutoHotkey. If you have the v2.0 version <b>UNINSTALL IT</b></li>
                         <li>To run the macro smoothly, your screen resolution should be at least <b>1920x1080</b>. If it's lower, the macro might not work properly.</li>
                         <li><b>Weight Color Detection Issue:</b> The issue with the macro might be due to your Roblox <b>skin color</b> or the <b>green lights</b> from above at the gym. Try centering your camera and zooming in a bit.</li>
                         <li>You need to have your keyboard language set to <b>English [US].</b></li>
                         <li>If you have color filters <b>on</b>, turn them <b>OFF</b>, and also check if your <b class="nvidia">NVIDIA</b> & <b style="color: rgb(204, 42, 42);">AMD</b> (Restore the settings to Default) color filters are normal so the macro can accurately detect pixel and image searches.</li>
                         <li>If you have the new <b>Roblox UI</b> :</li> <img style="border-radius: 3px 3px;" src="./assets/images/ui.png" width="150">
-                        <p><b>1. Download <a class="video2" href="https://github.com/pizzaboxer/bloxstrap/releases" target="_blank">Bloxstrap</a></b></p>
-                        <p><b>2. Go to "FastFlags" tab</b></p>
-                        <p><b>3. Then select <b style="color: antiquewhite;">Fast Flag Editor</b>. Click <b style="color: antiquewhite;">Add New</b>, choose <b style="color: antiquewhite;">Import JSON</b>, and paste this:</b></p>
-                        <b>
-                            4.
-                            <code>
-                            <br>
-                            {
-                                <br>
-                                "FFlagEnableInGameMenuChromeABTest4": "False"
-                                <br>
-                            }
-                        </code></b>
-                        <p><b>5.  Open the Browser Roblox</b></p>
+                        <p><b>1. Download the <a class="video2" href="https://github.com/fr0st-iwnl/kiyokomacro/BloxstrapUI/" target="_blank">Bloxstrap.bat</a> tool</b></p>
+                        <p><b>2. Select <span>1. Install Bloxstrap</span></b></p>
+                        <p><b>3. Once Bloxstrap is installed, select <span>2. Modify ClientAppSettings.json [REVERT TO OLD UI]</span> to revert to the previous user interface.</b></p>
+                        <p><b>4. Launch <span>Roblox</span> using your browser after completing the previous steps.</b></p>
                         <li>Turn off any apps or settings that modify the game's display, like roshade/reshade or other optimization tools, as they may interfere with the macro.</li>
                         <li>High ping can interfere with the macro's performance.</li>
                         <li><b>Do NOT USE</b> any custom fonts.</li>
                         <li><b>TURN OFF</b> your voice chat to avoid any potential issues with the macro.</li>
-                        <li><code style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: rgb(47, 104, 179);">"Image directory path is not specified in the settings.ini file. Macro stopped." :</code></li>
-                        <p><b>1. Upon opening the macro, you'll be asked to enter your <b style="color: rgb(180, 55, 55);">User ID</b>, <b style="color: rgb(180, 55, 55);">Webhook</b>, and <b style="color: rgb(180, 55, 55);">Image Path</b>. If you don't want the macro to send images through the webhook after it eats, just leave the Image Path blank and choose "No" for the image option in the Treadmill and SP tabs. If you do want the macro to send images after it eats, select "Yes" and provide your image path. For more details about Image Path and to see how it works, check out the version 3.8 announcement in the Discord server.</b></p>
                     </ul>
                 </p>
             </div>
@@ -160,7 +148,7 @@
      <div id="question-3" class="faq-item" 
      data-aos="fade-up"
      data-aos-offset="200"
-     data-aos-delay="500"
+     data-aos-delay="100"
                 data-aos-duration="600"
      data-aos-easing="ease-in-out"
      data-aos-mirror="true"
@@ -173,7 +161,7 @@
 <div id="question-4" class="faq-item"
      data-aos="fade-up"
      data-aos-offset="200"
-     data-aos-delay="500"
+     data-aos-delay="100"
                 data-aos-duration="600"
      data-aos-easing="ease-in-out"
      data-aos-mirror="true"
@@ -194,7 +182,7 @@
 <div id="question-5" class="faq-item"
      data-aos="fade-up"
      data-aos-offset="200"
-     data-aos-delay="500"
+     data-aos-delay="100"
                 data-aos-duration="600"
      data-aos-easing="ease-in-out"
      data-aos-mirror="true"
@@ -207,7 +195,7 @@
 <div id="question-6" class="faq-item"
      data-aos="fade-up"
      data-aos-offset="200"
-     data-aos-delay="500"
+     data-aos-delay="100"
                 data-aos-duration="600"
      data-aos-easing="ease-in-out"
      data-aos-mirror="true"
@@ -220,7 +208,7 @@
 <div id="question-7" class="faq-item"
      data-aos="fade-up"
      data-aos-offset="200"
-     data-aos-delay="500"
+     data-aos-delay="100"
                 data-aos-duration="600"
      data-aos-easing="ease-in-out"
      data-aos-mirror="true"
@@ -233,7 +221,7 @@
 <div id="question-9" class="faq-item"
      data-aos="fade-up"
      data-aos-offset="200"
-     data-aos-delay="500"
+     data-aos-delay="100"
                 data-aos-duration="600"
      data-aos-easing="ease-in-out"
      data-aos-mirror="true"

@@ -56,3 +56,15 @@ document.querySelector('.logo a').addEventListener('contextmenu', function(e) {
  // Update the footer with the current year
  document.getElementById('currentYear').textContent = currentYear;
      
+
+/* show stars on the website but meh im lazy to do the css for this
+ async function fetchGitHubStats() {
+    const response = await fetch('https://api.github.com/repos/fr0st-iwnl/kiyokomacro');
+    const repoData = await response.json();
+
+    document.getElementById('stars').innerText = `Stars: ${repoData.stargazers_count}`;
+}
+
+fetchGitHubStats();
+
+*/
